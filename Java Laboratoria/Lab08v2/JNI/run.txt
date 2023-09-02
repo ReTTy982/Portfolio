@@ -1,0 +1,8 @@
+javac -h ./JNI/library/ ./JNI/java_class/JniLoader.java
+# to z /library
+g++ -fPIC -I${JAVA_HOME}/include -I${JAVA_HOME}/include/darwin -dynamiclib -o libnative.dylib java_class_JniLoader.cpp
+# to z JNI folederu
+java -Djava.library.path=library java_class/JniLoader
+
+
+export JAVA_HOME=/Library

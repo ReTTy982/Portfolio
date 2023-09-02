@@ -1,0 +1,4 @@
+service.KappaService
+service.AccuracyService
+service.BalancedAccuracy
+service.F1ScoreService

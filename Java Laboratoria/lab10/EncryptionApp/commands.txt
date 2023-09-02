@@ -1,0 +1,8 @@
+Generowanie klucza
+keytool -genkey -alias certyfikat -keyalg RSA -keypass haslo123 -storepass haslo123 -keystore keystore.jks
+Eksportowanie
+keytool -export -alias certyfikat -storepass haslo123 -file certyfikat.cer -keystore keystore.jks
+Podpisywanie jara
+jarsigner -keystore keystore.jks -signedjar signedEncryptor.jar Encryptor-1.0-SNAPSHOT.jar server
+Weryfikowanie jara
+jarsigner -verify signedjar.jar

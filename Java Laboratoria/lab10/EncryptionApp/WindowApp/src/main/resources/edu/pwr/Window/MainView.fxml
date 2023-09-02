@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="525.0" prefWidth="630.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pwr.Window.MainController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <HBox prefHeight="513.0" prefWidth="590.0">
+      <children>
+         <VBox prefHeight="485.0" prefWidth="588.0">
+            <children>
+               <Label text="Algorytm dla szyfrowania" />
+               <ChoiceBox fx:id="algorythmChoiceBox" prefWidth="150.0" />
+               <Label text="Sciezka do wybranego pliku" />
+               <TextField fx:id="inputPathTxt" />
+               <Button fx:id="inputBtn" mnemonicParsing="false" onAction="#chooseInputFile" text="Wybierz plik wejsciowy" />
+               <Label text="Sciezka do pliku klucza" />
+               <TextField fx:id="outputPathEncTxt" prefHeight="25.0" prefWidth="297.0" />
+               <Button fx:id="chooseKeyBtn" mnemonicParsing="false" onAction="#chooseInputFile" text="Wybierz klucz" />
+               <Button fx:id="encodeBtn" mnemonicParsing="false" onAction="#encryptFile" text="Szyfruj" />
+               <Button fx:id="decodeBtn" mnemonicParsing="false" onAction="#decryptFile" text="Odszyfruj" />
+               <Region prefHeight="200.0" prefWidth="200.0" />
+               <Label text="Nazwa dla nowego pliku" />
+               <TextField fx:id="fileNameTxt" />
+               <Label text="Sciezka dla pliku wejsciowego" />
+               <TextField fx:id="outputPathKeyTxt" />
+               <Button fx:id="inputKeyBtn" mnemonicParsing="false" onAction="#chooseKeyOutputPath" text="Wybierz plik wejsciowy" />
+               <Label text="Algorytm dla klucza" />
+               <ChoiceBox fx:id="keyChoiceBox" prefWidth="150.0" />
+               <Button fx:id="acceptKeyBtn" mnemonicParsing="false" onAction="#generateKeys" text="Wygeneruj klucze" />
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+</VBox>
